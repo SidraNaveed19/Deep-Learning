@@ -30,9 +30,13 @@ ca = st.selectbox("Number of Major Vessels (0–3)", [0, 1, 2, 3])
 thal = st.selectbox("Thal (1 = Normal, 2 = Fixed Defect, 3 = Reversible)", [1, 2, 3])
 
 # Prepare input
-features = np.array([[age, sex, cp, trestbps, chol, fbs, restecg,
-                      thalach, exang, oldpeak, slope, ca, thal]])
+import pandas as pd
 
+features = pd.DataFrame([[age, sex, cp, trestbps, chol, fbs, restecg,
+                          thalach, exang, oldpeak, slope, ca, thal]],
+                        columns=['age', 'sex', 'cp', 'trestbps', 'chol',
+                                 'fbs', 'restecg', 'thalach', 'exang',
+                                 'oldpeak', 'slope', 'ca', 'thal'])
 # Scale input
 features = scaler.transform(features)
 
