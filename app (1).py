@@ -25,7 +25,7 @@ restecg = st.number_input("Rest ECG (0–2)", [0, 1, 2])
 thalach = st.number_input("Max Heart Rate Achieved", 60, 220)
 exang = st.number_input("Exercise Induced Angina ")
 oldpeak = st.number_input("Oldpeak (ST depression)", 0.0, 10.0)
-slope = st.number_input"Slope (0–2)")
+slope = st.number_input("Slope (0–2)")
 ca = st.number_input("Number of Major Vessels (0–3)")
 thal = st.number_input("Thal (1 = Normal, 2 = Fixed Defect, 3 = Reversible)")
 
